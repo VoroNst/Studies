@@ -1,4 +1,4 @@
-package _26_3_Streams.Метод_map;
+package _26_3_Streams.Метод_1_map;
 
 import java.util.ArrayList;
 import java.util.List;
