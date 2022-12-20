@@ -3,9 +3,9 @@ package _26_3_Streams.Метод_2_filter;
 import _0_initialData.InitialStudents;
 import _0_initialData.Student;
 
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Test_1_List {
     public static void main(String[] args) {
@@ -23,8 +23,22 @@ public class Test_1_List {
         studentList.add(student4);
         studentList.add(student5);
 
-        System.out.println(studentList);
-        studentList.set(0,new Student("IVan", 'm', 22, 3, 8.3));
-        System.out.println(studentList);
+        // System.out.println(studentList);
+        studentList.set(0, new Student("IVan", 'm', 22, 3, 8.3));
+        //System.out.println(studentList);
+
+        //List<Student> studentList2 = new ArrayList<>();
+        List<Student> studentList2 = sortStudents(studentList);
+        System.out.println(studentList2);
+        studentList2.set(0, new Student("Ivan", 'm', 22, 3, 8.3));
+        System.out.println(studentList2);
+
     }
+
+    static List<Student> sortStudents(List<Student> studentList) {
+        studentList = studentList.stream().filter(el -> el.getAge() == 22).collect(Collectors.toList());
+        //System.out.println(studentList);
+        return studentList;
+    }
+
 }
