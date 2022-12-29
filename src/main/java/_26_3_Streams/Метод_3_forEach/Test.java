@@ -10,6 +10,7 @@ public class Test {
     public static void main(String[] args) {
         Array arrays = new Array();
         int[] array = arrays.array;
+   
 
 // 1
 //        Arrays.stream(array).forEach(el -> {el = el * 2; System.out.println(el);});
@@ -22,6 +23,7 @@ public class Test {
 //3 Создание Stream без массива и колекций
         Stream<Integer>  studentStream = Stream.of(1,2,3,4,5);
         studentStream.forEach(System.out::print);
+
     }
 }
 
@@ -29,5 +31,6 @@ class Utils {
     public static void add(int a) {
         a = a + 5;
         System.out.println("Element: " + a);
+
     }
 }
